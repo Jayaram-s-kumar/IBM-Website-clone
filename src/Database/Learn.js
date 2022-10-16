@@ -1,0 +1,209 @@
+const learndata = [
+    
+        {
+            id:1,
+            main:{
+                title:"Documentation",
+                desc:""
+            },
+            sub:[
+                {
+                    subtitle:"All product documentation",
+                    desc:""
+                },
+                {
+                    subtitle:"IBM Cloud documentation",
+                    desc:""
+                },
+                {
+                    subtitle:"IBM Redbooks",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                }
+            ]
+                
+        },
+        {
+            id:2,
+            main:{
+                title:"IBM cloud platform support",
+                desc:""
+            },
+            sub:[
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                }
+            ]
+                
+        },
+        {
+            id:3,
+            main:{
+                title:"Developer",
+                desc:""
+            },
+            sub:[
+                {
+                    subtitle:"Code patterns",
+                    desc:""
+                },
+                {
+                    subtitle:"Devoloper community",
+                    desc:""
+                },
+                {
+                    subtitle:"Developer events",
+                    desc:""
+                },
+                {
+                    subtitle:"Open source @IBM",
+                    desc:""
+                },
+                {
+                    subtitle:"Technical Articles",
+                    desc:""
+                },
+                {
+                    subtitle:"Tutorials",
+                    desc:""
+                }
+            ]
+                
+        },
+        {
+            id:4,
+            main:{
+                title:"Community",
+                desc:""
+            },
+            sub:[
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                }
+            ]
+                
+        },
+        {
+            id:5,
+            main:{
+                title:"Support",
+                desc:""
+            },
+            sub:[
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                }
+            ]
+                
+        },
+        {
+            id:6,
+            main:{
+                title:"Training",
+                desc:""
+            },
+            sub:[
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                },
+                {
+                    subtitle:"",
+                    desc:""
+                }
+            ]
+                
+        }
+]
+
+export default learndata

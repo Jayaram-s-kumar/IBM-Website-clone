@@ -1,38 +1,672 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*                                           HEADER SECTION */
+
+.container{
+  display: grid;
+  grid-template-columns: 1.3fr 5fr 2fr;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-bottom:0.5px solid rgba(0, 0, 0, 0.252);
+}
+
+
+/*                       logo section */
+
+.logo{
+  height: 50px;
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  position: relative;
+ 
+}
+
+.logo img{
+  height: 60px;
+  margin-left: 16px;
+}
+
+.logo p{
+  margin-left: 26px;
+}
+
+.logo P:hover{
+  color: blueviolet;
+}
+
+.letscreate{
+  position: relative;
+}
+
+.letscreate:hover::after{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 0px;
+  background-color: blueviolet;
+  bottom: -13px;
+  left: 23px;
+  animation: underline 0.3s ease-out forwards   ;
+}
+.ibm:hover::after {
+  content: "";
+  position: absolute;
+  width: 31%;
+  height: 0px;
+  background-color: blueviolet;
+  bottom: 2px;
+  left: 14px;
+  animation: underline 0.3s ease-out forwards   ;
+}
+
+
+
+
+@keyframes underline {
+  100%{
+    height: 4px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/*                        header pages */
+
+.headerpages{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.252);
+
+}
+
+.headerpages ul{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.headerpages ul li{
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  position: relative;
+  height: 50px;
+}
+
+.headerpages ul li:hover::after{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 0px;
+  bottom: 2px;
+  background-color: blueviolet;
+  animation: underline 0.3s ease-out forwards   ;
+}
+
+.headerpages ul li:hover{
+  color: blueviolet;
+}
+
+
+.headerpages ul li img{
+  scale: 0.7;
+}
+
+
+/*                              right side */
+
+.rightside{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.search{
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  border-top: none;
+
+ 
+}
+
+.search img{
+  width: 23px;
+}
+
+.search input{
+  width: 85%;
+  height: 98%;
+  border: none;
+  outline: none;
+}
+
+.search input::placeholder{
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.search input{
+  padding-left: 10px;
+}
+
+.search-div{
+  width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-top: none;
+}
+
+.search-div:hover{
+  border-left: 2px solid blue;
+}
+
+.search:hover{
+  border: 2px solid blue;
+  border-top: none;
+}
+
+.account{
+  border-left: 0.5px solid rgba(0, 0, 0, 0.252);
+  display: grid;
+  grid-template-columns:  1fr;
+  align-items: center;
+
+}
+
+.nav-user{
+  display:flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+.nav-user img{
+  width: 30px;
+}
+.hamburger{
+  position: relative;
+  display: none;
+  justify-content: flex-start;
+}
+
+.hamburger img{
+  width: 20px;
+}
+
+.nav-user:hover::after{
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 0px;
+  bottom: -8px;
+  background-color: blueviolet;
+  animation: underline 0.3s ease-out forwards   ;
+}
+
+.hamburger:hover::after{
+  content: "";
+  position: absolute;
+  width: 36%;
+  height: 0px;
+  bottom: -13px;
+  background-color: blueviolet;
+  animation: underline 0.3s ease-out forwards 
+}
+
+.account_cred{
+  width: 150px;
+  position: absolute;
+  right: 0px;
+  box-shadow: -1px 1px 3px 0px #0000002b;;
+}
+
+.login,.myibm{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 13px 0px;
+}
+
+.login:hover,.myibm:hover{
+  background-color: blueviolet;
+  color: white;
+  transition: 0.2s;
+}
+
+.login p,.myibm p{
+  margin-left: 15px;
+}
+
+.myibm{
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.252);
+}
+
+@media (max-width:600px) {
+  .account_cred{
+    width: 100vw;
+  }
+}
+
+
+
+/* ----------toggle-sidebar------------ */
+
+
+.togglesidebar{
+  width: 349px;
+  position: absolute;
+  top: 0;
+  right: -349px;
+  background: rgb(255, 255, 255);
+  animation: togglesidebaranimation 0.2s linear forwards;
+}
+
+@keyframes togglesidebaranimation {
+  100%{
+   right: 0px;
+  }
+}
+
+.close-sidebar{
+    right: 0px;
+    animation: close-sidebar-animation 0.2s linear forwards;
+    
+}
+
+@keyframes close-sidebar-animation{
+  100%{
+   right: -349px;
+  }
+}
+
+.close-button{
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 2px solid black;
+}
+
+.close-button img{
+  margin: 17.5px 10px;
+  width: 15px;
+}
+
+.sidebarletscreate{
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebarletscreate p{
+  position: relative;
+  left: 20px;
+}
+
+.togglesidebar ul li{
+  list-style: none;
+}
+
+.togglesidebar ul li img{
+  width: 15px;
+}
+
+.togglesidebar ul li .container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.togglesidebar ul li .container .heading{
+  position: relative;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    justify-content: space-between;
+}
+
+.togglesidebar ul li .container .heading p{
+  position: relative;
+  left: 20px;
+}
+
+.togglesidebar ul li .container .heading .symbolplus{
+    font-size: 28px;
+    margin-right: 40px;
+}
+
+.togglesidebar ul li .container .heading .symbolminus{
+  font-size: 30px;
+  margin-right: 42px;
+  margin-bottom: 28px;
+
+}
+
+.togglesidebar ul li .container .sub-items ul li{
+  height: 44px;
+  width: fit-content;
+ 
+}
+
+.togglesidebar ul li .container .sub-items ul{
+  margin-left: 20px;
+}
+
+.togglesidebar ul li .heading:hover{
+    background-color: blueviolet;
+    color: white;
+}
+
+.togglesidebar .sidebarletscreate:hover{
+  background-color: blueviolet;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.togglesidebar ul li .sub-items ul li{
+  position: relative;
+  left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.togglesidebar ul li .container .sub-items ul li:hover::after{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: blueviolet;
+  bottom: 16px;
+  left: 0px;
+}
+
+
+.togglesidebar ul li .container .sub-items ul li:hover{
+  color: blueviolet;
+}
+
+.sub-items{
+  height: 0px;
+  overflow: hidden;
+}
+
+
+
+
+
+.dwn-anim1{
+  animation: down-animation1 0.2s linear forwards   ;
+}
+
+.up-anim1{
+  height: 620px;
+  animation: up-animation1 0.2s linear forwards   ;
+}
+
+@keyframes up-animation1 {
+  100%{
+    height: 0px;
   }
 }
+
+@keyframes down-animation1 {
+    100%{
+      height: 620px;;
+    }
+}
+
+
+
+.dwn-anim2{
+  animation: down-animation2 0.2s linear forwards   ;
+}
+
+.up-anim2{
+  height: 478px;
+  animation: up-animation2 0.2s linear forwards   ;
+}
+
+@keyframes up-animation2 {
+  100%{
+    height: 0px;
+  }
+}
+
+@keyframes down-animation2 {
+    100%{
+      height: 478px;;
+    }
+}
+
+
+
+.dwn-anim3{
+  animation: down-animation3 0.2s linear forwards   ;
+}
+
+.up-anim3{
+  height: 262px;
+  animation: up-animation3 0.2s linear forwards   ;
+}
+
+@keyframes up-animation3 {
+  100%{
+    height: 0px;
+  }
+}
+
+@keyframes down-animation3 {
+    100%{
+      height: 262px;;
+    }
+}
+
+
+
+
+.dwn-anim4{
+  animation: down-animation4 0.2s linear forwards   ;
+}
+
+.up-anim4{
+  height: 170px;
+  animation: up-animation4 0.2s linear forwards   ;
+}
+
+@keyframes up-animation4 {
+  100%{
+    height: 0px;
+  }
+}
+
+@keyframes down-animation4 {
+    100%{
+      height: 170px;;
+    }
+}
+
+
+/* ----------media query for top navbar-------------- */
+
+@media (max-width:1200px) {
+  .headerpages{
+    display: none;
+  }
+
+  .hamburger{
+    display: flex;
+  }
+
+  .account{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .letscreate{
+    display: none;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width:600px) {
+    .search input{
+      display: none;
+    }
+
+    .search{
+      justify-content: flex-end;
+    }
+
+    .rightside{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+/* ----------------------------------------------------- */
+
+
+.mobile-search{
+  display: none;
+}
+
+.mobile-search-close{
+  width: 50px;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid gray;
+  
+}
+
+.mobile-search-close:active{
+  background-color: rgba(128, 128, 128, 0.089);
+}
+
+.mobile-search-close img{
+  width: 14px;
+}
+
+.mobile-search-input{
+  align-items: center;
+  width: 100%;
+  display: flex;
+  
+}
+
+.mobile-search-input input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+ 
+}
+
+.mobile-search-input input:focus{
+  border-bottom: 2px solid blueviolet;
+}
+
+.mobile-search-input input::placeholder{
+  padding-left: 11px;
+  font-size: 16px;
+}
+
+.mobile-search-input input{
+  padding: 10px;
+}
+
+.mobile-search-icon{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-search-icon:active{
+  background-color: rgba(128, 128, 128, 0.089);
+}
+
+.mobile-search-icon{
+  border-bottom: 2px solid blueviolet;
+}
+
+
+
+.mobile-search-icon img{
+  width: 23px;
+}
+
+
+@media (max-width:600px) {
+    .mobile-search{
+      display: flex;
+    }
+
+    .search-div:hover{ 
+      border: 1px solid blueviolet;
+      border-top: none;
+      
+    }
+
+    .ibm:hover::after {
+      width: 80%;
+      left: 16px;
+    }
+}
+
+@media (max-width:450px) {
+  .togglesidebar{
+    width: 100vw;
+  }
+
+  .close-sidebar{
+    right: 0px;
+    animation: close-sidebar-animation 0.2s linear forwards;
+    
+  }
+
+  @keyframes close-sidebar-animation{
+    100%{
+      right:-100vw;
+    }
+  }
+}
+
+
+@media (max-width:349px) {
+  .togglesidebar{
+    width: 100vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
