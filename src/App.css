@@ -230,7 +230,8 @@ body{
   width: 150px;
   position: absolute;
   right: 0px;
-  box-shadow: -1px 1px 3px 0px #0000002b;;
+  box-shadow: -1px 1px 3px 0px #0000002b;
+  background-color: white;
 }
 
 .login,.myibm{

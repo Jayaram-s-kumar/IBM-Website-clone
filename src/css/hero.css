@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Herocontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left-section right-section";
+}
+
+.Heroleft{
+    margin-left: 40px;
+    margin-top: 33px;
+    grid-template-areas: left-section;
+}
+
+.Heroleft .title{
+    font-weight: lighter;
+    font-size: 47px;
+}
+
+.Heroleft .bottom{
+    margin-top: 158px;
+}
+
+.Heroleft .bottom p{
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.bottom .explorebutton{
+    background: blueviolet;
+    color: white;
+    width: 173px;
+    height: 38px;
+    position: relative;
+}
+
+.bottom .explorebutton button{
+    background: blueviolet;
+    color: white;
+    position: absolute;
+    padding-left: 10px;
+    height: 38px;
+    border: none;
+}
+
+.Heroright{
+    margin-top: 33px;
+    grid-template-areas: right-section;
+}
+
+.Heroright img{
+    width:550px;
+    margin-left: 42px;
+} 
